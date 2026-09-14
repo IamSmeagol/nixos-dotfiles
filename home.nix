@@ -15,7 +15,7 @@ let
   };
   aliases = {
     btw = "echo i use nixos btw";
-    build = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixos-desktop}";
+    build = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles";
     update = "nix flake update --flake ~/nixos-dotfiles";
     upgrade = "update && build";
     waylandcraft = "prismlauncher --launch 26.1.2-wayland-craft";

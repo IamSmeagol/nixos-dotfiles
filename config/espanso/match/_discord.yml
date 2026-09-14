@@ -1,0 +1,14 @@
+matches: 
+  - regex: "^4"
+    replace: "owo\n"
+  - regex: "^5"
+    replace: "owoh\n"
+  - regex: "^6"
+    replace: "owob\n"
+  - regex: "^7"
+    replace: "owobuy 1\n"
+  - regex: "^9"
+    replace: "owopray {{clipb}}\n"
+    vars:
+      - name: "clipb"
+        type: "clipboard"

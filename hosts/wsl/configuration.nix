@@ -41,6 +41,7 @@ home-manager = {
 useGlobalPkgs = true;
 useUserPackages = true;
 users.nixos = import ./home.nix;
+users.will = import ../../home.nix;
 };
 nix.settings.extra-experimental-features = ["nix-command" "flakes" ];
   # This value determines the NixOS release from which the default

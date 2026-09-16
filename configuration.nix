@@ -28,6 +28,7 @@
   environment.systemPackages = with pkgs; [
     typst
     gh
+    ripgrep
     typstPackages.versatile-apa
     evince
     python313Packages.pytest

@@ -12,7 +12,7 @@
 
   outputs = { nixpkgs, home-manager, nixos-wsl, ... }: {
 
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nixos-desktop = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = {
         host = "nixos";

@@ -1,3 +1,3 @@
-filter_class: discord
+filter_class: discord-canary
 
 extra_includes: [../match/_discord.yml]

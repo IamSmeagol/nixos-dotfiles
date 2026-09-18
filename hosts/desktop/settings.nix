@@ -117,6 +117,7 @@
   programs.xwayland.enable = true;
   services.picom.enable = true;
 
+  services.espanso.enable = true;
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

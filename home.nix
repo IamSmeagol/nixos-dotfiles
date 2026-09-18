@@ -49,6 +49,13 @@ in
   programs.fish = {
     enable = true;
     shellAliases = aliases;
+    functions.espanso-toggle = ''
+      if systemctl --user is-active --quiet espanso
+          systemctl --user stop espanso
+      else
+          systemctl --user start espanso
+      end
+    '';
   };
 
   programs.rofi.enable = true;
@@ -91,7 +98,6 @@ in
     nmap
     fish
     maim
-    espanso
     octaveFull
     spotify
     libreoffice-qt

@@ -1,4 +1,12 @@
 matches: 
+  - regex: "3"
+    replace: "<t:{{output}}:R>"
+    vars:
+      - name: output
+        type: date
+        params:
+          format: "%s"
+          offset: 15
   - regex: "4"
     replace: "owo"
   - regex: "5"
@@ -7,6 +15,8 @@ matches:
     replace: "owob"
   - regex: "7"
     replace: "owobuy 1"
+  - regex: "8"
+    replace: "owopray 327996739628040192"
   - regex: "9"
     replace: "owopray {{clipb}}"
     vars:

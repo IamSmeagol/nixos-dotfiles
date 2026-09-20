@@ -29,6 +29,8 @@ in
   home.homeDirectory = "/home/will";
   home.stateVersion = "25.11";
 
+  xsession.numlock.enable = true;
+
   programs.git = {
     enable = true;
     settings = {
@@ -55,6 +57,9 @@ in
       else
           systemctl --user start espanso
       end
+    '';
+    functions.nix-shell = ''
+      command nix-shell --run fish $argv
     '';
   };
 

@@ -5,7 +5,12 @@
 # NixOS-WSL specific options are documented on the NixOS-WSL repository:
 # https://github.com/nix-community/NixOS-WSL
 
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   # not needed in flake
@@ -17,33 +22,29 @@
   wsl.enable = true;
   wsl.defaultUser = "nixos";
 
-  environment.systemPackages = with pkgs; [ 
-neovim
-vim
-clang
- git
- gcc
-nerd-fonts.jetbrains-mono
-gnumake
-jq
-unzip
-python3
-tmux
-nix-ld
-tree-sitter
- ];
+  environment.systemPackages = with pkgs; [
+    neovim
+    vim
+    clang
+    git
+    gcc
+    nerd-fonts.jetbrains-mono
+    gnumake
+    jq
+    unzip
+    python3
+    tmux
+    nix-ld
+    tree-sitter
+  ];
 
-fonts.packages = with pkgs; [
-nerd-fonts.jetbrains-mono
-];
-
-home-manager = {
-useGlobalPkgs = true;
-useUserPackages = true;
-users.nixos = import ./home.nix;
-users.will = import ../../home.nix;
-};
-nix.settings.extra-experimental-features = ["nix-command" "flakes" ];
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+  ];
+  nix.settings.extra-experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It's perfectly fine and recommended to leave

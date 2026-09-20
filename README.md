@@ -5,9 +5,10 @@ Directory structure:
 ```text
 .
 ├── config // Configs handled by home assistant
-└── hosts // 
+└── hosts // device specific settings
     ├── desktop
     └── wsl
+└── users // home-manager files
 ```
 
 ## Goals/Policies

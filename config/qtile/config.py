@@ -279,7 +279,7 @@ screens = [
                     mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn('notify-disk')},
                     partition = '/',
                     #format = '[{p}] {uf}{m} ({r:.0f}%)',
-                    format = '{uf}{m} free',
+                    format = '{uf:.2f}{m} free',
                     fmt = 'Disk: {}',
                     visible_on_warn = False,
                 ),

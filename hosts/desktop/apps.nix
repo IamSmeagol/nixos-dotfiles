@@ -18,6 +18,7 @@
     copyq # clipboard history
     cdemu-daemon
     cdemu-client
+    spotify
 
   ];
   programs.gamescope.enable = true;

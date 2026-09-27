@@ -104,7 +104,6 @@ in
     fish
     maim
     octaveFull
-    spotify
     libreoffice-qt
     hunspell
     hunspellDicts.en_US

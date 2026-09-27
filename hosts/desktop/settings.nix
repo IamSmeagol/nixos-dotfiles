@@ -115,6 +115,7 @@
   services.picom.enable = true;
 
   services.espanso.enable = true;
+  services.espanso.package = pkgs.espanso-wayland;
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

@@ -6,14 +6,6 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
    time.timeZone = "America/New_York";
-  users.users.will = {
-    isNormalUser = true;
-    description = "will";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
-  };
 
   # global packages for now
   programs.firefox.enable = true;

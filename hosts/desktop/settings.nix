@@ -19,6 +19,15 @@
   };
   networking.hostName = "nixos-desktop"; # Define your hostname.
   services.tailscale.enable = true;
+  
+  users.users.will = {
+    isNormalUser = true;
+    description = "will";
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+  };
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 

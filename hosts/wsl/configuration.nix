@@ -21,6 +21,8 @@
 
   wsl.enable = true;
   wsl.defaultUser = "nixos";
+  # allow dynamically linked binaries
+  programs.nix-ld.enable = true;
 
   environment.systemPackages = with pkgs; [
     neovim

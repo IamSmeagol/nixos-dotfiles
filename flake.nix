@@ -60,7 +60,6 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               users.nixos = import ./users/nixos.nix;
-              users.will = import ./users/will.nix;
               backupFileExtension = "backup";
             };
 

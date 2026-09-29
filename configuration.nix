@@ -5,7 +5,7 @@
 { pkgs, ... }: {
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-   time.timeZone = "America/New_York";
+  time.timeZone = "America/New_York";
 
   # global packages for now
   programs.firefox.enable = true;

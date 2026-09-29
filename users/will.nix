@@ -76,7 +76,6 @@ in
     ripgrep
     nil
     nixpkgs-fmt
-    nodejs
     gcc
     fd
     cargo

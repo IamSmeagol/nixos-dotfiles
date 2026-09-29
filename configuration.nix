@@ -32,6 +32,7 @@
     ripgrep
     typstPackages.versatile-apa
     evince
+    nodejs
     python313Packages.pytest
     vim
     wget

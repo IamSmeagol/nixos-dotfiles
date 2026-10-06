@@ -18,7 +18,10 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
 
+  # allow dynamically linked binaries
+  programs.nix-ld.enable = true;
   environment.systemPackages = with pkgs; [
+    nixpkgs-reviewFull
     typst
     gh
     ripgrep

@@ -91,6 +91,7 @@ in
     flameshot
     jellyfin-desktop
     handbrake
+    osu-lazer-bin
     vlc
     makemkv
     abcde

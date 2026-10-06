@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, nixpkgs-espanso, ... }: {
 
   # Bootloader.
   boot = {
@@ -19,7 +19,7 @@
   };
   networking.hostName = "nixos-desktop"; # Define your hostname.
   services.tailscale.enable = true;
-  
+
   users.users.will = {
     isNormalUser = true;
     description = "will";
@@ -78,20 +78,20 @@
   };
 
   # Use gnome
-  services.desktopManager.gnome.enable = true;
-  services.displayManager.gdm.enable = true;
-  # Use only GNOME shell
-  services.gnome.core-apps.enable = false;
-  services.gnome.core-developer-tools.enable = false;
-  services.gnome.games.enable = false;
-  environment.gnome.excludePackages = with pkgs; [
-    gnome-tour
-    gnome-user-docs
-  ];
-  # services.displayManager.ly.enable = true;
-  # services.displayManager.ly.settings = {
-  #   numlock = true;
-  # };
+  # services.desktopManager.gnome.enable = true;
+  # services.displayManager.gdm.enable = true;
+  # # Use only GNOME shell
+  # services.gnome.core-apps.enable = false;
+  # services.gnome.core-developer-tools.enable = false;
+  # services.gnome.games.enable = false;
+  # environment.gnome.excludePackages = with pkgs; [
+  #   gnome-tour
+  #   gnome-user-docs
+  # ];
+  services.displayManager.ly.enable = true;
+  services.displayManager.ly.settings = {
+    numlock = true;
+  };
 
   # Enable the KDE Plasma Desktop Environment.
   #  services.displayManager.sddm.enable = true;
@@ -124,7 +124,6 @@
   services.picom.enable = true;
 
   services.espanso.enable = true;
-  services.espanso.package = pkgs.espanso-wayland;
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -143,5 +142,4 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-
 }

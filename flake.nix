@@ -11,6 +11,7 @@
       url = "github:nix-community/NixOS-WSL/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixpkgs-espanso.url = "github:nixos/nixpkgs/b55208305dc143fe991c10444ca3d7cfa5a9adb7";
   };
 
   outputs =
@@ -18,6 +19,7 @@
       nixpkgs,
       home-manager,
       nixos-wsl,
+      nixpkgs-espanso,
       ...
     }:
     {
@@ -26,6 +28,7 @@
         system = "x86_64-linux";
         specialArgs = {
           host = "nixos";
+          inherit nixpkgs-espanso;
         };
 
         modules = [
